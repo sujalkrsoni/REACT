@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- We use cdn upto 17version of react, but now latest version is 18 -->
+    <!-- <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script> -->
+
+     <!-- for 18+ versions -->
+      <script src="../node_modules/react/umd/react.development.js"></script>
+      <script src="../node_modules/react-dom/umd/react-dom.development.js"></script>
+      <script src="../node_modules/@babel/standalone/babel.js"></script>
+    <script type="text/babel">
+        // for upto 17 versions
+        // ReactDOM.render('welcome to react' , document.getElementById("root")); 
+
+
+        // for 18+ versions
+        function Login(){  // make sure you written in TextCase
+            // return <h1>Welcom to react </h1>;
+            return (<div> 
+                    <h1>Welcom to react</h1> 
+                    <p>THis is <br/> react page</p>
+                </div>);
+        }
+        ReactDOM.render(<Login></Login>,document.getElementById("root"));
+    </script>
+</head>
+<body>
+    <noscript>Please Enable javascript</noscript>
+    <div id="root"></div>
+</body>
+</html>

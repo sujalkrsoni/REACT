@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+
+    <script src="../node_modules/react/umd/react.development.js"></script>
+    <script src="../node_modules/react-dom/umd/react-dom.development.js"></script>
+    <script src="../node_modules/@babel/standalone/babel.js"></script>
+
+    <style>
+        .bg-img{
+            background: url("img/background.jpeg ");
+            height: 100vh;
+            background-size: cover;
+        }
+        .bg-shade{
+            background-color: rgba(0, 0, 0, 0.713);
+            height: 100vh;
+        }
+        .main{
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            color: white;
+            font-weight: bold;
+            margin-top: 150px;
+            text-align: center;
+            margin-bottom: 25px;
+        }
+        .main h1{
+            font-size: 60px;
+            font-weight: bold;
+        }
+        .login{
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        .login input{
+            background-color: rgba(0, 0, 0, 0.412);
+            width: 450px;
+            height: 55px;
+            border: 1px solid rgba(255, 255, 255, 0.472);
+            color: white;
+            margin-left: 100px;
+            padding-left: 20px;
+        }
+        .login input :active{
+            background-color: rgba(0, 0, 0, 0.412);
+        }
+    </style>
+    <script type="text/babel">
+        function NetflixIndex(){
+            return (
+                <div className="bg-img">
+                    <div className="bg-shade">
+                        <NetflixHeader />
+                        <NetflixMain />
+                        <Login />
+                    </div>
+                    
+                </div>
+            );
+        }
+
+        function NetflixHeader(){
+            return (
+                <header className="d-flex justify-content-around text-white p-4">
+                    <div>
+                        <img src="img/logo.png" width="165px" alt="" />
+                    </div>
+                    <div className="d-flex input-group w-25 ms-5">
+                        <span className="bi bi-translate input-group-text"></span>
+                        <select name="" id="" className="form-select">
+                            <option value="">English</option>    
+                            <option value="">Hindi</option>
+                        </select>
+                        <button className="btn ms-2 btn-danger">Sign-In</button>
+                    </div>
+                </header>
+            );
+        }
+
+        function NetflixMain(){
+            return (
+                <div className='main'>
+                    <h1>Unlimited movies,<br/> TV shows and more</h1>
+                    <h5>Starts at ₹149. Cancel anytime.</h5>
+                    </div>
+                );
+            }
+            
+            function Login(){
+                return (
+                <div className="login ">
+                    <div>
+                    <p>Ready to watch? Enter your email to create or restart your membership.</p>
+                    </div>
+                    <div className=" d-flex w-50">
+                        <input className="me-2" type="text" placeholder="Enter Email"/>
+                        <button className="btn btn-danger ">Get Started &gt; </button>   
+                    </div>
+                     
+                </div>
+            )
+        }
+
+        ReactDOM.render(<NetflixIndex></NetflixIndex>,document.getElementById("root"));
+    </script>
+</head>
+<body>
+    <noscript>Please Enable Javascipt</noscript>
+     <div id="root">
+
+     </div>
+</body>
+</html>

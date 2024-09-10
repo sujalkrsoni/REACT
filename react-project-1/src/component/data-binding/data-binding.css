@@ -1,0 +1,9 @@
+
+.scrollable{
+    width: 150px;
+    height: 70px;
+    border: 1px solid grey;
+    padding: 15px;
+    overflow: auto;
+    list-style: none;
+}
