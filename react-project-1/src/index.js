@@ -16,12 +16,26 @@ import { StyleDemo } from './component/style-binding/styledemo';
 import { ClassBinding } from './component/class-binding/class-binding';
 import { EventHandling } from './component/events-handing/event';
 import { MouseEvents } from './component/mouse-events/mouse';
+import { DisplayContainer } from './component/mouse-events/mouse2';
+import { TouchMove } from './component/mouse-events/touchmove';
+import { KeyboardEvent } from './component/mouse-events/keyboard';
+import { LoginValidation } from './component/mouse-events/passwordvalidation.jsx';
+import { CopyPaste } from './component/mouse-events/copy-paste.jsx';
+import { FormDemo } from './component/mouse-events/form.jsx';
+import { Form } from './component/form/formdemo.jsx';
+import { Formik } from './component/form/formikdemo.jsx';
+import { FormikForm } from './component/form/formikform.jsx';
+import { HookDemo } from './component/form/hookfrom.jsx';
+import { Debounce } from './component/debouncing/debounce.jsx';
+import { ContextDemo } from './component/context-demo/context.jsx';
+import { ReducerDemo } from './component/reducer demo/reducer.jsx';
+import { Register } from './component/class component/register/register.jsx';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     {/* <Login />
-    <DataBinding /> */}
+    <DataBinding />
     <DataBinding2 />
     <DataBinding3 /> 
     <StateBinding />
@@ -30,6 +44,20 @@ root.render(
     <ClassBinding />
     <EventHandling />
     <MouseEvents />
+    <DisplayContainer />
+    <TouchMove />
+    <KeyboardEvent />
+    <LoginValidation />
+    <CopyPaste />
+    <FormDemo />
+    <Form />
+    <Formik />
+    <FormikForm />
+    <HookDemo />
+    <Debounce />
+    <ContextDemo /> */}
+    {/* <ReducerDemo /> */}
+    <Register />
   </React.StrictMode>
 );
 

@@ -1,0 +1,24 @@
+<script>
+    let userName = prompt("Enter your name")
+let role = prompt("enter your role")
+
+class Product {
+    _ProductName;
+
+    get PName(){
+        return this._ProductName;
+    }
+    set PName(newName){
+        if(role == "admin"){
+            this._ProductName = newName
+            document.write(this._ProductName)
+        }else{
+            document.write("Sorry")
+        }
+    }
+
+}
+
+let obj = new Product();
+obj.PName = prompt("Enter product Name")
+</script>

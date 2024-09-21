@@ -19,17 +19,22 @@ export function MouseEvents(){
 
     }
 
-    const [Moving, setMoving] = useState({position : '' , x : '' , y : ''})
+    const [Moving, setMoving] = useState({position : ' ' , top : ' ' , left : ' '})
     function HandleMove(e){
         setMoving({
             position : 'fixed',
-            x : e.clientX + 'px',
-            y : e.clientY + 'px',
+            left : e.clientX + 'px',
+            top : e.clientY + 'px',
+            border : '3px solid black',
+            height : '20px',
+            width : '20px',
+            borderRadius : '50%',
+            padding : '20px'
         })
     }
-
     return (
-        <div className="row" onMouseMove={HandleMove} style={{height: "1000px"}}>
+        <div className="row" style={{height: "1000px"}}> 
+            
             {/* <div className="col">
                 {
                     pics.map((imgs) =>
@@ -38,11 +43,21 @@ export function MouseEvents(){
                         </div>
                     )
                 }
-            </div>
-            <div className="col">
+            </div> */}
+
+
+            {/* <div className="col">
                 <img src={activeImg} width="500px" height="750px" alt="" />
             </div> */}
-            <div  className="rounded text-dark rounded-circle" style={Moving} >ABCcgfh</div>
+
+
+            {/* <div><img width="20px" height="20px" src="https://yt3.googleusercontent.com/8gjld8X7j7NvoaqTcN3lWuC2vowDimXq7xpb5lI6nmIC-eFuXZ_f8lhrwG3n33IPevNfIjNU0A=s900-c-k-c0x00ffffff-no-rj" style={Moving} alt="" /></div> */}
+
+            <div style={Moving}>
+                <div style={{backgroundColor : 'red', width : '15px' , height : '15px', borderRadius : '50%'}}></div>
+            </div>
+        
+
         </div>
     )
 }
